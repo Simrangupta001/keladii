@@ -1,214 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .card-header{
-            background-color: #084da2;
-            color: white;
-        }
-        .fixed-height{
-            height: 300px;
-            overflow: auto;
-            
-        }
-        .overlay-title{
-            bottom: 20px;
-            left: 25px;
-            
-            
-        }
-        .figure{
-            overflow: hidden;
-        }
-        .figure img{
-            transition: 0.5s ease-in-out;
-        }
-        .figure img:hover{
-           transform: scale(1.05);
-        }
-        .category{
-            background-color: #f52257;
-            padding: 5px 10px;
-        }
-        .blue-bg{
-            background-color: #084da2;
-            color: white;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports News</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+    .navbar-custom {
+        background-color: #084da2;
+    }
+    .category {
+        background-color: #f52257;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+    }
+    .figure img {
+        transition: 0.5s ease-in-out;
+    }
+    .figure img:hover {
+        transform: scale(1.05);
+    }
+    .overlay-title {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-shadow: 1px 1px 5px black;
+    }
+    .fixed-height {
+        height: 280px;
+        overflow-y: auto;
+    }
+    /* Scrolling news animation */
+    .scrolling-news {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .scrolling-news a {
+        display: inline-block;
+        padding: 0 2rem;
+        color: white;
+        text-decoration: none;
+        animation: scroll-left 20s linear infinite;
+    }
+    @keyframes scroll-left {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://kheladi.com/assets/images/logo.png">
-                <p class="text-center">आश्विन २, २०८१ बुधबार </p>
-            </div>
-            <div class="col-md-8">ADS</div>
-        </div>
-        
-    </div>
-    <div class="" style="background-color: #084da2;">
-        <div class="container">
-    <ul class="list-unstyled text-white d-flex mb-0">
-        <li class="p-3">Football</li>
-        <li class="p-3">Cricket</li>
-        <li class="p-3">Volleyball</li>
-        <li class="p-3">Sport Department</li>
-        <li class="p-3">Basketball</li>
-        <li class="p-3">Other</li>
-        <li class="p-3 float-end">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </li>
-    </ul>
 
+<!-- Header -->
+<div class="container my-3">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="https://kheladi.com/assets/images/logo.png" class="img-fluid">
+            <p class="mt-2">आश्विन २, २०८१ बुधबार</p>
+        </div>
+        <div class="col-md-8 text-end">ADS</div>
     </div>
-    </div>
-    <div style="background-color: #f52257;">
-        <div class="container">
-    <marquee>
-        <a class="p-4 text-white text-decoration-none"> basketball news</a>
-        <a class="p-4 text-white text-decoration-none"> football news</a>
-        <a class="p-4 text-white text-decoration-none"> Volleyball news</a>
-        <a class="p-4 text-white text-decoration-none"> national sport news</a>
-        <a class="p-4 text-white text-decoration-none"> Cricket news</a>
-        <a class="p-4 text-white text-decoration-none"> international news</a>
-        <a class="p-4 text-white text-decoration-none"> other news</a> 
-    </marquee>
 </div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-custom mb-0">
+    <div class="container">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Football</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Cricket</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Volleyball</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Sport Department</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Basketball</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white" href="#">Other</a></li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     </div>
-    <div class="text-center mt-3">
-    <img src="https://kheladi.com/uploads/kokoku/1706440795.gif">
+</nav>
+
+<!-- Scrolling News -->
+<div class="bg-danger py-2">
+    <div class="container scrolling-news">
+        <a href="#">Basketball News</a>
+        <a href="#">Football News</a>
+        <a href="#">Volleyball News</a>
+        <a href="#">National Sport News</a>
+        <a href="#">Cricket News</a>
+        <a href="#">International News</a>
+        <a href="#">Other News</a>
+    </div>
 </div>
-<div class="container mt-3">
+
+<!-- Main Banner -->
+<div class="text-center my-3">
+    <img src="https://kheladi.com/uploads/kokoku/1706440795.gif" class="img-fluid">
+</div>
+
+<!-- News Section -->
+<div class="container my-3">
     <div class="row">
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="figure position-relative">
-                    <img src="http://kheladi.com/uploads/media/2024/09/19//172670964966eb7f914bda58_20368057.jpg" class="w-100">
-                    <a href="" class="text-white text-decoration-none position-absolute overlay-title fw-bold fs-4 d-block">Nepal wins against India</a>
-                </div>
+                <div class="col-md-8 position-relative figure">
+                    <img src="http://kheladi.com/uploads/media/2024/09/19//172670964966eb7f914bda58_20368057.jpg" class="img-fluid w-100">
+                    <a href="#" class="overlay-title">Nepal wins against India</a>
                 </div>
                 <div class="col-md-4">
-                    <div class="newslist fixed-height">
-                        <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
+                    <div class="fixed-height border p-2">
+                        <div class="mb-3">
+                            <span class="category">Football</span>
+                            <a href="#" class="d-block fw-bold mt-1 text-dark">Title 1</a>
                         </div>
+                        <div class="mb-3">
+                            <span class="category">Football</span>
+                            <a href="#" class="d-block fw-bold mt-1 text-dark">Title 2</a>
                         </div>
-                        <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
+                        <div class="mb-3">
+                            <span class="category">Football</span>
+                            <a href="#" class="d-block fw-bold mt-1 text-dark">Title 3</a>
                         </div>
-                        </div>
-                        <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
-                        </div>
-                        </div>
-                        <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
-                        </div>
-                        </div>
-                        <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
-                        </div>
-                        </div> 
-                         <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
-                        </div>
-                        </div>
-                          <div class="singlenews"><hr>
-                            <span class="category text-white">football</span>
-                            <div class="mt-2">
-                            <a href="" class="text-decoration-none fw-bold text-dark" >this is title</a>
-                        </div>
-                        </div>
+                        <!-- Add more items similarly -->
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Sidebar -->
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-primary text-white">
                     ताजा समाचार
                 </div>
                 <ul class="list-group list-group-flush fixed-height">
-                  <li class="list-group-item">अमेरिकालाई हराउँदै उत्तर कोरिया फाइनलमा</li>
-                  <li class="list-group-item">भाग्यमानी पिएसजी</li>
-                  <li class="list-group-item">पहिलो खेलमै रोकियो सिटी</li>
-                  <li class="list-group-item">नेपाल रोमाञ्चक खेलमा ओमानसँग १ विकेटले पराजित</li>
-                  <li class="list-group-item">पेरिस पारा ओलम्पिकमा सहभागी टोली सम्मानित</li>
-                  <li class="list-group-item">थाइल्यान्ड जाने रोलर स्केटिङ टोलीको बिदाइ</li>
-                  <li class="list-group-item">कागेश्वरी मनोहरा उज्ज्वल तारा दौड असोज १२ गते हुने</li>
-                  <li class="list-group-item">ओमानविरुद्ध ब्याटिङ गर्दै नेपाल</li>
-                  <li class="list-group-item">बुढानिलकण्ठ र कुर्दानको विजयी सुरुआत</li>
-
+                    <li class="list-group-item">अमेरिकालाई हराउँदै उत्तर कोरिया फाइनलमा</li>
+                    <li class="list-group-item">भाग्यमानी पिएसजी</li>
+                    <li class="list-group-item">पहिलो खेलमै रोकियो सिटी</li>
+                    <li class="list-group-item">नेपाल रोमाञ्चक खेलमा ओमानसँग १ विकेटले पराजित</li>
+                    <li class="list-group-item">पेरिस पारा ओलम्पिकमा सहभागी टोली सम्मानित</li>
                 </ul>
-              </div>
-        </div>
-    </div>
-    <div class="text-center mb-2">
-        <img src="https://kheladi.com/uploads/kokoku/1707446655.gif" >
-    </div>
-</div>
-<div class="container-fluid blue-bg">
-    <div class="container">
-        <div class="fs-2">शनिबारको दिन </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="mb-2">आश्विन ५, २०८१</div>
-           
-           
-           
-                <div class="figure">
-                    <img  class="w-100" src="http://kheladi.com/uploads/media/2024/09/20//172682315766ed3af52b72b9_95407041.jpg" alt="">
-                    </div>
-                    <ul class="list-group list-group-flush fixed-height ">
-                        <li class="list-group-item bg-none ">अमेरिकालाई हराउँदै उत्तर कोरिया फाइनलमा</li>
-                        <li class="list-group-item bg-none ">पहिलो खेलमै रोकियो सिटी</li>
-                        <li class="list-group-item bg-none ">नेपाल रोमाञ्चक खेलमा ओमानसँग १ विकेटले पराजित</li>
-                        <li class="list-group-item bg-none ">भाग्यमानी पिएसजी</li>
-                        <li class="list-group-item bg-none ">पेरिस पारा ओलम्पिकमा सहभागी टोली सम्मानित</li>
-                        <li class="list-group-item bg-none ">थाइल्यान्ड जाने रोलर स्केटिङ टोलीको बिदाइ</li>
-                        <li class="list-group-item bg-none ">कागेश्वरी मनोहरा उज्ज्वल तारा दौड असोज १२ गते हुने</li>
-                        <li class="list-group-item bg-none ">ओमानविरुद्ध ब्याटिङ गर्दै नेपाल</li>
-                        <li class="list-group-item">बुढानिलकण्ठ र कुर्दानको विजयी सुरुआत</li>
-      
-                      </ul>
-               
-                </div>
-            <div class="col-md-3"0>भाद्र २९, २०८१</div>
-
-            <div class="col-md-3"0>भाद्र २२, २०८१</div>
-            <div class="col-md-3"0>भाद्र १५, २०८१</div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Video Section -->
+<div class="container my-3">
+    <iframe width="100%" height="350" src="https://www.youtube.com/embed/puqorvBs6Jg" 
+        title="CAVA Women's Volleyball Club Championship 2024" frameborder="0" 
+        allowfullscreen></iframe>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8"></div> 
-        <iframe width="100%" height="350" src="https://www.youtube.com/embed/puqorvBs6Jg" title="CAVA Women&#39;s Volleyball Club Championship 2024 WINNER  Nepal Police Club  स्वदेश फर्कियो" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="col-md-4"></div>
-    </div>
-</div>
-<div class="col-md-4"> </div>
-    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
