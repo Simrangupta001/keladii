@@ -29,4 +29,4 @@ Font Awesome
 
 📷 Preview [The browser look]
 
-file:///C:/Users/ACER/Desktop/simrangupta/keladii-1/index.html
+C:/Users/ACER/Desktop/simrangupta/keladii-1/index.html
