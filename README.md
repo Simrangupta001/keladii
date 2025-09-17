@@ -4,15 +4,11 @@ A responsive sports news web application built with HTML, CSS, Bootstrap, and Fo
 It features:
 
 📌 Responsive Navbar with categories (Football, Cricket, Volleyball, Basketball, etc.)
-
 📌 Scrolling News Ticker for live update
-
 📌 News Cards & Sidebar with latest headlines
-
-
 📌 Embedded YouTube Videos for highlights
-
 📌 Nepali Date Support in header
+📌 Image Hover Effects
 
 The project is styled with Bootstrap 5.3 for layout and components, plus custom CSS for hover and overlay effects.
 
