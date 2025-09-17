@@ -8,7 +8,7 @@ It features:
 📌 News Cards & Sidebar with latest headlines
 📌 Embedded YouTube Videos for highlights
 📌 Nepali Date Support in header
-📌 Image Hover Effects
+📌 Image Hover Effects for interactive uI/ux
 
 The project is styled with Bootstrap 5.3 for layout and components, plus custom CSS for hover and overlay effects.
 
@@ -19,6 +19,6 @@ CSS3
 Bootstrap 5.3
 Font Awesome
 
-📷 Preview [The browser look]
+📷 Preview [The browser look]  
 
 C:/Users/ACER/Desktop/simrangupta/keladii-1/index.html
