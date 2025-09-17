@@ -5,11 +5,10 @@ It features:
 
 📌 Responsive Navbar with categories (Football, Cricket, Volleyball, Basketball, etc.)
 
-📌 Scrolling News Ticker for live updates
+📌 Scrolling News Ticker for live update
 
 📌 News Cards & Sidebar with latest headlines
 
-📌 Image Hover Effects for interactive UI
 
 📌 Embedded YouTube Videos for highlights
 
@@ -20,11 +19,8 @@ The project is styled with Bootstrap 5.3 for layout and components, plus custom 
 🚀 Tech Stack
 
 HTML5
-
 CSS3
-
 Bootstrap 5.3
-
 Font Awesome
 
 📷 Preview [The browser look]
